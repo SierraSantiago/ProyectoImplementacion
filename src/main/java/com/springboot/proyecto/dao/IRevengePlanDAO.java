@@ -1,0 +1,7 @@
+package com.springboot.proyecto.dao;
+
+import com.springboot.proyecto.models.RevengePlan;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IRevengePlanDAO extends JpaRepository<RevengePlan, Long> {
+}
