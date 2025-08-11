@@ -1,6 +1,8 @@
 package com.springboot.proyecto.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Bully {
@@ -21,6 +23,10 @@ public class Bully {
     @ManyToOne
     @JoinColumn(name = "clique_id")
     private Clique clique;
+
+    @OneToMany
+    @JsonIgnore
+    private Set<RevengePlan> revengePlans;
 
     // Getters y Setters
 
